@@ -1,0 +1,13 @@
+[project]
+name = "measure"
+version = "0.0.1"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+ext-modules = [
+  {name = "measure", sources = ["measure.c"], extra-compile-args = ["-Wall", "-O3"]}
+]
+
