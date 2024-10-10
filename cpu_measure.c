@@ -84,7 +84,7 @@ static PyMethodDef measure_methods[] = {
 
 static PyTypeObject MeasureType = {
   .ob_base = PyVarObject_HEAD_INIT(NULL, 0)
-  .tp_name = "measure.Measure",
+  .tp_name = "cpu_measure.Measure",
   .tp_basicsize = sizeof(MeasureObject),
   .tp_itemsize = 0,
   .tp_new = PyType_GenericNew,
@@ -101,7 +101,7 @@ static struct PyModuleDef measuremodule = {
   -1,
 };
 
-PyMODINIT_FUNC PyInit_measure(void) {
+PyMODINIT_FUNC PyInit_cpu_measure(void) {
   if (PyType_Ready(&MeasureType) < 0) {
     return NULL;
   }

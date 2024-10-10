@@ -1,6 +1,16 @@
 [project]
-name = "measure"
 version = "0.0.1"
+name = "cpu-measure"
+description = "Measure CPU cycles from Python"
+readme = "README.md"
+license = {text = "MIT License"}
+authors = [
+  {name = "Serhii Karelov", email = "axe@sharaxe.org"},
+}
+
+[project.urls]
+Homepage = "https://github.com/serhii-karelov/cpu-measure"
+Repository = "https://github.com/serhii-karelov/cpu-measure"
 
 [build-system]
 requires = ["setuptools"]
@@ -8,6 +18,6 @@ build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
 ext-modules = [
-  {name = "measure", sources = ["measure.c"], extra-compile-args = ["-Wall", "-O3"]}
+  {name = "cpu_measure", sources = ["cpu_measure.c"], extra-compile-args = ["-Wall", "-O3"]}
 ]
 

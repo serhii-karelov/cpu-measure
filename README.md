@@ -1,10 +1,10 @@
-## Measure number of cycles from Python
+# Measure number of CPU cycles from Python
 Mesures the number of cycles from start untill the end of the exectuion of a 
-code block. Corrects the result for the overhead from measurement. 
+code block. Corrects the measurement for the overhead for accessing the `RDTSCP`. 
 
 Usage: 
 ```python
-from measure import Measure 
+from cpu_measure import Measure 
 measure = Measure()
 
 with measure:
@@ -20,8 +20,12 @@ measure.cycles # Increments the counter
 #  314159265358
 ```
 
+## Installation 
+```
+pip intall cpu-measure
+```
 ## Details
-The library uses `RDTSCP` instaruction to read the TSP register.
+The library uses `RDTSCP` instruction to read the TSP register.
 Note that the number of cycles is counted from the start utill the end
 of the execution of the code block. One should be careful when interpreting
 results of long-running tasks, especially that invlole IO. The current

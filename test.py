@@ -1,6 +1,6 @@
 import unittest
 
-from measure import Measure
+from cpu_measure import Measure
 
 
 class TestMeasure(unittest.TestCase):
@@ -34,3 +34,4 @@ class TestMeasure(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
