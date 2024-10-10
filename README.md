@@ -6,12 +6,18 @@ Usage:
 ```python
 from measure import Measure 
 measure = Measure()
+
 with measure:
     find_kth_prime(k)
-    # ...
 
-print(f"Cycles taken: {measure.cycles}")
-# Cycles taken: 314159265358
+measure.cycles # Cycles taken
+# 271828182845
+
+with measure:
+    find_kth_prime(k + 1)
+
+measure.cycles # Increments the counter
+#  314159265358
 ```
 
 ## Details
